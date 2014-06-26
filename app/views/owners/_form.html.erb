@@ -1,0 +1,38 @@
+<div class="panel-body">
+  <%= form_for @owner do |f| %>
+    <% if @owner.errors.any? %>
+      <div class = "error_explanation">
+        <h2>Invalid Form: <%= pluralize(@owner.errors.count, "error") %> prohibited sign-up success </h2>
+        <ul>
+          <% @owner.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %><br>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation %></br>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Sign up", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

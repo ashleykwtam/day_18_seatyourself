@@ -24,12 +24,28 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "About", about_path %></li>
-          <% if current_customer %>
-            <li><%= link_to "Log Out", session_path("current"), :method => :delete %></li>
-          <% else %>
-            <li><%= link_to "Log In", new_customer_session_path %></li>
-            <li><%= link_to "Sign Up", new_customer_url %></li>
-          <% end %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Customer <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <% if current_customer %>
+                <li><%= link_to "Log Out", session_path("current"), :method => :delete %></li>
+              <% else %>
+                <li><%= link_to "Log In", new_customer_session_path %></li>
+                <li><%= link_to "Sign Up", new_customer_url %></li>
+              <% end %>
+            </ul>
+          </li>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Owner <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <% if current_owner %>
+                <li><%= link_to "Log Out", session_path("current"), :method => :delete %></li>
+              <% else %>
+                <li><%= link_to "Log In", new_owner_session_path %></li>
+                <li><%= link_to "Sign Up", new_owner_url %></li>
+              <% end %>
+            </ul>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

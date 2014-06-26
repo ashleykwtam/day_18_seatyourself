@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :customers, :only => [:new, :create]
   resources :customer_sessions, :only => [:new, :create, :destroy]
+  resources :owners, :only => [:new, :create]
+  resources :owner_sessions, :only => [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

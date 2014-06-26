@@ -4,16 +4,16 @@ class CustomersController < ApplicationController
   end
 
   def create
-    @customer = Customer.new(user_params)
+    @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to products_url, :notice => "Signed up!"
+      redirect_to root_url, :notice => "Signed up!"
     else
       render 'new'
     end
   end
 
   private
-  def user_params
+  def customer_params
     params.require(:customer).permit(:first_name, :last_name, :email, :password, :password_confirmation, :bio_description)
   end
 end
