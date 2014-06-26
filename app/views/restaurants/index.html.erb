@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  
+  <div class="row">
+    
+      <% @restaurants.each do |restaurant| %>
+      <div class="col-md-4">
+        <%= restaurant.name %>
+        <%= restaurant.cuisine %>
+        <%= restaurant.location %>
+        <%= restaurant.phone_number %>
+        <%= restaurant.hours_open %>
+        <%= link_to "More", restaurant_path(restaurant.id) %>
+         </div>
+      <% end %>
+   
+  </div>
+</div>

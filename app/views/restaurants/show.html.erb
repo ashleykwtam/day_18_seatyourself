@@ -1,0 +1,30 @@
+<p>
+  <b>Name: </b>
+  <%= @restaurant.name %>
+</p>
+<p>
+  <b>Description: </b>
+  <%= @restaurant.description %>
+</p>
+<p>
+  <b>Cuisine: </b>
+  <%= @restaurant.cuisine %>
+</p>
+<p>
+  <b>Location: </b>
+  <%= @restaurant.location %>
+</p>
+<p>
+  <b>Phone #: </b>
+  <%= @restaurant.phone_number %>
+</p>
+<p>
+  <b>Hours Open: </b>
+  <%= @restaurant.hours_open %>
+</p>
+<p>
+  <b>Maximum Occupancy: </b>
+  <%= @restaurant.max_occupancy %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> | <%= link_to 'Back', restaurants_path %>

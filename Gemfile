@@ -38,6 +38,8 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'pry-rails'
+  gem 'better_errors'
 end
 # Use unicorn as the app server
 # gem 'unicorn'
