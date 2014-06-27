@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626142900) do
+ActiveRecord::Schema.define(version: 20140627004836) do
 
   create_table "customers", force: true do |t|
     t.string   "first_name"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140626142900) do
     t.integer  "max_occupancy"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id"
   end
 
 end
