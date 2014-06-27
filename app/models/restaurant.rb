@@ -3,4 +3,5 @@ class Restaurant < ActiveRecord::Base
   validates :phone_number, :numericality => { :only_integer => true }
 
   belongs_to :owner
+  has_many :reservations
 end
