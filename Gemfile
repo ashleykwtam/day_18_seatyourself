@@ -31,12 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'
 
-group :development, :test do
-  gem 'sqlite3'  
-end
+gem 'sqlite3'
 
-group :production do
-  gem 'pg'
+group :development do
   gem 'rails_12factor'
   gem 'pry-rails'
   gem 'better_errors'
