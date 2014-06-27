@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :owners, :only => [:new, :create]
   resources :owner_sessions, :only => [:new, :create, :destroy]
   resources :restaurants, :except => [:destroy] do
-    resources :reservations, :only => [:create]
+    resources :reservations, :only => [:new, :create]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
